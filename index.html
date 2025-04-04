@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./add-task.css">
+    <link rel="stylesheet" href="./task-list.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>مدیریت وظایف</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>مدیریت وظایف</h1>
+        </div>
+    </header>
+    <div class="main">
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <i class="material-icons" style="font-size:36px">home</i>
+
+                    <a class="home-btn" href="#" >صفحه اصلی</a>
+                </li>
+                <li>
+                    <i class="material-icons">featured_play_list</i>
+
+                    <a class="task-lists-btn" href="#">لیست وظایف</a>
+                </li>
+                <li>
+                    <i class="material-icons">library_add</i>
+                    <a class="add-task-btn" href="#">افزودن وظیفه</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-meno">
+            <a class="home-btn" href="#" ><i class="material-icons" style="font-size:36px">home</i></a>
+            <a class="task-lists-btn" href="#"><i class="material-icons">featured_play_list</i></a>
+            <a class="add-task-btn" href="#"><i class="material-icons">library_add</i></a>
+        </div>
+        <div class="home-content">
+            <div class="today content-items">
+                <h2>وظایف امروز</h2>
+                <ul>
+                    <li>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <p>   هفته مقاله جدیدم را بنویسم و منتشر کنم.</p>
+                    </li>
+                    <li>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <p> بررسی ایمیل‌ها و پیام‌های کاری </p>
+                    </li>
+                    <li>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <p>برنامه‌ریزی کارهای روزانه</p> 
+                    </li>
+                    <li>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <p> یادآوری یک استراحت کوتاه</p>
+                    </li>
+                    <li>
+                        <i class="material-icons">check_box_outline_blank</i>
+                        <p>   هفته مقاله جدیدم را بنویسم و منتشر کنم.</p>
+                    </li>
+                    <li>
+                        <i class="material-icons done-event">check_box</i>
+                        <p> بررسی ایمیل‌ها و پیام‌های کاری </p>
+                    </li>
+                    <li>
+                        <i class="material-icons done-event">check_box</i>
+                        <p>برنامه‌ریزی کارهای روزانه</p> 
+                    </li>
+                    <li>
+                        <i class="material-icons done-event">check_box</i>
+                        <p> یادآوری یک استراحت کوتاه</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="important-event content-items">
+                <h2>رویدادهای مهم</h2>
+            </div>
+            <div class="ongoing-projects content-items">
+                <h2>پروژه‌ها و کارهای در حال انجام</h2>
+                <div class="ongoing-items">
+                    <div class="ongoing-item">
+                        <h3>طراحی وبسایت</h3>
+            
+                    </div>
+                </div>
+            
+            </div>
+            <div class="calendor content-items">
+                <h2>تقویم و برنامه‌ریزی هفتگی</h2>
+            
+                <div class="calendor-container">
+                        <div class="month-title">
+                            <i  class="material-icons" onclick="change_calendor(1)">chevron_right</i>
+                            <div id="month-title-text"></div> 
+                            <i class="material-icons" onclick="change_calendor(0)">chevron_left</i>
+                            <i  class="material-icons" onclick="change_calendor(3)">chevron_right</i>
+                            <div id="year-title-text"></div> 
+                            <i class="material-icons" onclick="change_calendor(2)">chevron_left</i>
+
+                        </div>
+                        <p class="calendor-week-title">یکشنبه</p>
+                        <p class="calendor-week-title">دوشنبه</p>
+                        <p class="calendor-week-title">سه‌شنبه</p>
+                        <p class="calendor-week-title">چهارشنبه</p>
+                        <p class="calendor-week-title">پنجشنبه</p>
+                        <p class="calendor-week-title">جمعه</p>
+                        <p class="calendor-week-title">شنبه</p>            
+
+                </div>
+            </div>
+            
+                
+        </div>
+        
+        <div class="task-lists-content">
+            <div class="task-list-box">
+                <ul id="task-list">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="add-task-content">
+            <div class="add-box">
+                <h2 class="add-box-title">افزودن وظیفه</h2>
+                <form class="form"  id="add-task-form">
+                    <label for="text">وظیفه</label>
+                    <input type="text" id="text-form" name="text" required>
+                    <label for="start-date">تاریخ شروع</label>
+                    <input type="date" name="start-date" id="start-date-form" required>
+                    <label for="end-date">تاریخ پایان</label>
+                    <input type="date" name="end-date" id="end-date-form" required>
+                    <label for="level">اهمیت وظیفه</label>
+                    <select name="level" id="level-form" required>
+                        <option value="easy">کم اهمیت</option>
+                        <option value="medium"> متوسط</option>
+                        <option value="hard">مهم</option>
+                    </select>
+
+                    <Button type="submit" class="btn-submit-new-task">افزودن</Button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./home.js"></script>
+    <script src="./add task.js"></script>
+    <script src="./task-list.js"></script>
+</body>
+</html>
