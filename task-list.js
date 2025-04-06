@@ -1,4 +1,6 @@
-let task_list=document.getElementById("task-list");
+const task_list=document.getElementById("task-list");
+const delete_box=document.querySelector(".delete-box");
+
 async function get_data_api(){
 
     let res = await fetch('https://67e583ab18194932a5865f58.mockapi.io/api/task', {
@@ -23,7 +25,8 @@ async function fetchData() {
         edite_btn.textContent='ویرایش';
         edite_btn.classList.add('btn','edit-btn');
         let delete_btn=document.createElement("button");
-        delete_btn.textContent='ویرایش';
+        delete_btn.textContent='حذف';
+        delete_btn.addEventListener("click",()=>delete_task(element.id));
         delete_btn.classList.add('btn','delete-btn');
         new_li.appendChild(new_p);
         new_div_btn.appendChild(edite_btn);
@@ -34,5 +37,16 @@ async function fetchData() {
 
     });
 }
-
+async function delete_task(id){
+    let res= await fetch(`https://67e583ab18194932a5865f58.mockapi.io/api/task/${id}`,{
+        method:'DELETE',
+    })
+    if (res.ok){
+        alert("تسک با موفقیت حذف گردید");
+        task_list.innerHTML='';
+        fetchData();
+    }
+}
+// function delete_box_manager(id){
+// }
 fetchData();

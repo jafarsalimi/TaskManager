@@ -125,6 +125,7 @@
                     
                 </ul>
             </div>
+
         </div>
         <div class="add-task-content">
             <div class="add-box">
@@ -145,6 +146,14 @@
 
                     <Button type="submit" class="btn-submit-new-task">افزودن</Button>
                 </form>
+            </div>
+        </div>
+        <div class="delete-box">
+            <p>آیا مطمئن هستید که می‌خواهید این تسک را حذف کنید؟</p>
+            <p style="color: red;">این عمل قابل بازگشت نیست.</p>
+            <div>
+                <button class="btn confirm" onclick="confirmDelete()">بله، حذف شود</button>
+                <button class="btn unconfirm" onclick="cancelDelete()">لغو</button>
             </div>
         </div>
     </div>

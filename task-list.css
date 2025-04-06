@@ -70,7 +70,37 @@
     background: #e23a2e;
 
 }
-
+.delete-box{
+    display: none;
+    position: absolute;
+    background: #ffd0c7;
+    padding: 5rem;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+.delete-box .btn{
+    padding: 0.3rem 0.8rem;  
+    font-family: iransans;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.delete-box .btn.confirm{
+    background: #3e4a61;
+}
+.delete-box .btn.unconfirm{
+    background: #c53232;
+}
 @media (max-width: 600px) {
     .task-lists-content{
         flex-basis: 100%;
