@@ -3,7 +3,7 @@
     src: url("./Iranian\ Sans.ttf");
 }
 .task-lists-content{
-    display: flex;
+    display: none;
     justify-content: center;
     flex-basis: 85%;
     align-items: flex-start;
