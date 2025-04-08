@@ -81,15 +81,16 @@ function change_calendor(m){
 
 }
 display_calendor();
+document.querySelector('.s-i-1').style.color="white";
 
 document.querySelectorAll(".home-btn").forEach(button=>
     button.addEventListener('click',function(){
         home_content.style.display="grid";
         task_lists_content.style.display="none";
         add_task_content.style.display="none";
-        document.querySelector('.s-i-1').style.color="white";
-        document.querySelector('.s-i-3').style.color="";
-        document.querySelector('.s-i-2').style.color="";
+        document.querySelectorAll('.s-i-1').forEach(item=>item.style.color="white");
+        document.querySelectorAll('.s-i-3').forEach(item=>item.style.color="");
+        document.querySelectorAll('.s-i-2').forEach(item=>item.style.color="");
     })
 );
 
@@ -98,9 +99,9 @@ document.querySelectorAll(".add-task-btn").forEach(button=>
         home_content.style.display='none';
         task_lists_content.style.display="none";
         add_task_content.style.display='flex';
-        document.querySelector('.s-i-1').style.color="";
-        document.querySelector('.s-i-3').style.color="white";
-        document.querySelector('.s-i-2').style.color="";
+        document.querySelectorAll('.s-i-1').forEach(item=>item.style.color="");
+        document.querySelectorAll('.s-i-3').forEach(item=>item.style.color="white");
+        document.querySelectorAll('.s-i-2').forEach(item=>item.style.color="");
     })
 );
 
