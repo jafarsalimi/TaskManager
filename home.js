@@ -81,18 +81,15 @@ function change_calendor(m){
 
 }
 display_calendor();
-const icon_home_btn=document.querySelector('.s-i-1');
-const icon_list_btn=document.getElementById('.s-i-2');
 
-const icon_add_btn=document.querySelector('.s-i-3');
 document.querySelectorAll(".home-btn").forEach(button=>
     button.addEventListener('click',function(){
         home_content.style.display="grid";
         task_lists_content.style.display="none";
         add_task_content.style.display="none";
-        icon_home_btn.style.color="white";
-
-        icon_add_btn.style.color="#234346";
+        document.querySelector('.s-i-1').style.color="white";
+        document.querySelector('.s-i-3').style.color="";
+        document.querySelector('.s-i-2').style.color="";
     })
 );
 
@@ -101,8 +98,9 @@ document.querySelectorAll(".add-task-btn").forEach(button=>
         home_content.style.display='none';
         task_lists_content.style.display="none";
         add_task_content.style.display='flex';
-        icon_home_btn.style.color="#234346";
-        icon_add_btn.style.color="white";
+        document.querySelector('.s-i-1').style.color="";
+        document.querySelector('.s-i-3').style.color="white";
+        document.querySelector('.s-i-2').style.color="";
     })
 );
 

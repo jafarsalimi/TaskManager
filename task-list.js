@@ -126,8 +126,9 @@ document.querySelectorAll(".task-lists-btn").forEach(button=>
         home_content.style.display="none";
         task_lists_content.style.display="flex";
         add_task_content.style.display='none';
-        icon_home_btn.style.color="#234346";
-        icon_add_btn.style.color="#234346";
+        document.querySelector('.s-i-1').style.color="";
+        document.querySelector('.s-i-3').style.color="";
+        document.querySelector('.s-i-2').style.color="white";
         fetchData();
     })
 );
