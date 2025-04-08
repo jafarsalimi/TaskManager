@@ -88,13 +88,7 @@ document.querySelectorAll(".home-btn").forEach(button=>
         add_task_content.style.display="none";
     })
 );
-document.querySelectorAll(".task-lists-btn").forEach(button=>
-    button.addEventListener("click",function(){
-        home_content.style.display="none";
-        task_lists_content.style.display="flex";
-        add_task_content.style.display='none';
-    })
-);
+
 document.querySelectorAll(".add-task-btn").forEach(button=>
     button.addEventListener("click",function(){
         home_content.style.display='none';

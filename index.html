@@ -148,16 +148,37 @@
                 </form>
             </div>
         </div>
-        <div class="delete-box">
-            <p>آیا مطمئن هستید که می‌خواهید این تسک را حذف کنید؟</p>
-            <p style="color: red;">این عمل قابل بازگشت نیست.</p>
-            <div>
-                <button class="btn confirm" onclick="confirmDelete()">بله، حذف شود</button>
-                <button class="btn unconfirm" onclick="cancelDelete()">لغو</button>
-            </div>
-        </div>
+        
     </div>
+    <div class="overlay" id="overlay"></div>
 
+    <div class="delete-box">
+                <p>آیا مطمئن هستید که می‌خواهید این تسک را حذف کنید؟</p>
+                <p style="color: red;">این عمل قابل بازگشت نیست.</p>
+                <div>
+                    <button id="confirm-btn" class="btn confirm">بله، حذف شود</button>
+                    <button id="unconfirm-btn" class="btn unconfirm">خیر</button>
+                </div>
+    </div>
+    <div class="edite-box">
+        <form class="form">
+            <label for="text-update">وظیفه</label>
+            <input type="text-update" id="text-form-update" name="text" required>
+            <label for="start-date-update">تاریخ شروع</label>
+            <input type="date" name="start-date-update" id="start-date-form-update" required>
+            <label for="end-date-update">تاریخ پایان</label>
+            <input type="date" name="end-date-update" id="end-date-form-update" required>
+            <label for="level-update">اهمیت وظیفه</label>
+            <select name="level-update" id="level-form-update" required>
+                <option value="easy">کم اهمیت</option>
+                <option value="medium"> متوسط</option>
+                <option value="hard">مهم</option>
+            </select>
+
+            <Button type="submit" class="btn-submit-new-task">ثبت تغییرات</Button>
+            
+        </form>
+    </div>
     <script src="./home.js"></script>
     <script src="./add task.js"></script>
     <script src="./task-list.js"></script>

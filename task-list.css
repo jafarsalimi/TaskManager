@@ -72,18 +72,20 @@
 }
 .delete-box{
     display: none;
-    position: absolute;
-    background: #ffd0c7;
-    padding: 5rem;
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 2rem;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    opacity: 1; /* کاملاً واضح بمونه */
+    pointer-events: auto;
     flex-flow: column;
+    justify-content: center;
     gap: 0.5rem;
 }
 .delete-box .btn{
@@ -100,6 +102,44 @@
 }
 .delete-box .btn.unconfirm{
     background: #c53232;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* پس‌زمینه تار با شفافیت */
+    z-index: 1000;
+    display: none;
+  }
+.edite-box{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 2rem;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    opacity: 1; /* کاملاً واضح بمونه */
+    pointer-events: auto;
+
+}
+.edite-box .form{
+    display: grid;   
+    grid-template-columns: repeat(5,auto);
+    gap: 0.5rem;
+}
+.edite-box .form label{
+    grid-column: 1/2;
+}
+.edite-box .form input{
+    grid-column: 2/6;
+}
+.edite-box .form select{
+    grid-column: 2/6;
 }
 @media (max-width: 600px) {
     .task-lists-content{
