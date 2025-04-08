@@ -119,12 +119,15 @@ async function update_task(id){
 
 }
 fetchData();
+
 document.querySelectorAll(".task-lists-btn").forEach(button=>
     button.addEventListener("click",function(){
 
         home_content.style.display="none";
         task_lists_content.style.display="flex";
         add_task_content.style.display='none';
+        icon_home_btn.style.color="#234346";
+        icon_add_btn.style.color="#234346";
         fetchData();
     })
 );
