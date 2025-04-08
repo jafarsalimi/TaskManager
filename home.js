@@ -81,7 +81,7 @@ function change_calendor(m){
 
 }
 display_calendor();
-document.querySelector('.s-i-1').style.color="white";
+document.querySelectorAll('.s-i-1').forEach(item=>item.style.color="white");
 
 document.querySelectorAll(".home-btn").forEach(button=>
     button.addEventListener('click',function(){
