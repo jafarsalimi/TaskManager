@@ -127,19 +127,37 @@
     pointer-events: auto;
 
 }
-.edite-box .form{
+.edite-box form{
     display: grid;   
     grid-template-columns: repeat(5,auto);
     gap: 0.5rem;
 }
-.edite-box .form label{
+.edite-box form label{
     grid-column: 1/2;
 }
-.edite-box .form input{
+.edite-box form input{
     grid-column: 2/6;
 }
-.edite-box .form select{
+.edite-box form select{
     grid-column: 2/6;
+}
+.edite-box .btn{
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    color: white;
+    font-family: iransans;
+}
+.edite-box .btn.change{
+    background: rgb(13, 152, 46);
+    grid-column: 2/3;
+}
+.edite-box .btn.cancel{
+    background: #c53232;
+    grid-column: 3/4;
 }
 @media (max-width: 600px) {
     .task-lists-content{

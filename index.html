@@ -161,7 +161,7 @@
                 </div>
     </div>
     <div class="edite-box">
-        <form class="form">
+        <form class="form" id="update-form">
             <label for="text-update">وظیفه</label>
             <input type="text-update" id="text-form-update" name="text" required>
             <label for="start-date-update">تاریخ شروع</label>
@@ -175,8 +175,8 @@
                 <option value="hard">مهم</option>
             </select>
 
-            <Button type="submit" class="btn-submit-new-task">ثبت تغییرات</Button>
-            
+            <Button type="submit" class="btn change">ثبت تغییرات</Button>
+            <Button type="button" class="btn cancel" onclick="cancel_update_box()">لغو</Button>
         </form>
     </div>
     <script src="./home.js"></script>
